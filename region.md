@@ -56,3 +56,24 @@ A complete list of region IDs can be found here:
 
 The file names represent the region IDs \(without the .geojson extension\).
 
+## Examples
+
+### Courses in Scherpenheuvel-Zichem
+> filter all events with eventtype "Cursus of workshop" that take place in city "Scherpenheuvel-Zichem"
+
+**params**
+* URL param: `regionId=gem-scherpenheuvel-zichem&termIds=0.3.1.0.0`
+
+``` 
+https://search.uitdatabank.be/events/?regionId=gem-scherpenheuvel-zichem&termIds=0.3.1.0.0&embed=true
+```
+
+### All events in "Provincie West-Vlaanderen" AND "Provincie Oost-Vlaanderen"
+> filter all events with a location in "Oost-Vlaanderen" OR "West-Vlaanderen"
+
+**params**
+* Advanced query: `q=regions:("prv-oost-vlaanderen" OR "prv-west-vlaanderen")`
+
+``` 
+https://search.uitdatabank.be/events/?q=regions:("prv-oost-vlaanderen" OR "prv-west-vlaanderen")&embed=true
+```

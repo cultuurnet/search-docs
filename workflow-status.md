@@ -5,6 +5,7 @@ You can search by workflow status using two methods:
 * URL parameter
 * Advanced queries
 
+
 ## URL parameter
 
 You can filter by an exact match using the `workflowStatus` URL parameter:
@@ -35,5 +36,17 @@ A workflow status can be any of the following values \(case-insensitive\):
 * REJECTED
 * DELETED
 
+By default offers with workflow status 'DRAFT', 'REJECTED' and 'DELETED' are filtered from the results
 
+## Examples
+
+### Approved events in Mechelen
+> Show only approved events that take place in city Mechelen
+
+**params**
+* URL param: `workflowStatus=APPROVED&regionId=gem-mechelen`
+
+```
+GET https://search.uitdatabank.be/offers/?workflowStatus=APPROVED&regionId=gem-mechelen
+```
 

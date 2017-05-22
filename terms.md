@@ -51,3 +51,43 @@ GET https://search.uitdatabank.be/offers/?q=terms.label:"Begeleide rondleiding" 
 
 For more info, see the [advanced queries documentation](/advanced-queries.md).
 
+For a list of available terms, see [UiTdatabank taxonomy](http://taxonomy.uitdatabank.be/api/domain):
+* All available domains: http://taxonomy.uitdatabank.be/api/domain
+* All terms in domain 'eventtype': http://taxonomy.uitdatabank.be/api/domain/eventtype/classification
+
+## Examples
+
+### Jazz and blues concerts
+> All events with eventtype "concert" and theme "Jazz en blues".
+
+**params**
+
+* URL params: `termIds[]=0.50.4.0.0&termIds[]=1.8.2.0.0`
+* URL params: `termLabels[]=Concert&termLabels[]="Jazz en blues"`
+
+```
+GET https://search.uitdatabank.be/events/?embed=true&termIds[]=0.50.4.0.0&termIds[]=1.8.2.0.0
+```
+
+### Parties
+> All events with eventtype "Party of fuif"
+
+**params**
+
+* URL params: `termIds[]=0.49.0.0.0`
+
+```
+GET https://search.uitdatabank.be/events/?embed=true&termIds[]=0.49.0.0.0
+```
+
+### Landscape or nature reserve
+> All places with type 'Natuurgebied of park'
+
+
+**params**
+* URL params: `termIds[]=0.15.0.0.0`
+
+*Note the endpoint `/places`:*
+```
+GET https://search.uitdatabank.be/places/?embed=true&termIds[]=0.15.0.0.0
+```

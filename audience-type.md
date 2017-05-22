@@ -31,3 +31,26 @@ GET https://search.uitdatabank.be/offers/?q=audienceType:members OR audienceType
 
 For more info, see the [advanced queries documentation](/advanced-queries.md).
 
+## Examples
+
+### UiTPAS-events for members
+> filter all events with an UiTPAS organizer and audienceType "members"
+
+**params**
+* URL param: `audienceType=members&uitpas=true` *'uitpas' URL param not yet available*
+* Advanced query: `q=audienceType:members AND labels:(UiTPAS* OR paspartoe)`
+ 
+```
+GET https://search.uitdatabank.be/events/?q=audienceType:members AND labels:(UiTPAS* OR paspartoe)
+```
+
+### Events for schools in Leuven
+> filter all events with target audience "schools" and location in city "Leuven"
+
+**params**
+* URL param: `audienceType=education&regionIds[]=gem-Leuven`
+* Advanced query: `q=audienceType:members AND regions:gem-Leuven`
+
+```
+GET https://search.uitdatabank.be/offers/?audienceType=education&regionIds[]=gem-Leuven
+```

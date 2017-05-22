@@ -65,5 +65,4 @@ Example response:
 
 The key of each facet node is the value you should use to filter that specific field. In the example above, you can filter by using the `regionId` [URL parameter](/region.md) or the `regions` field in [advanced queries](/advanced-queries.md) in combination with any key from the returned facets, to narrow down your search.
 
-**Important! **You should never assume a specific amount of levels for a particular facet in your code. Instead, you should parse the given facets recursively by looking for the `children` property in each one.
-
+**Important!** You should never assume a specific amount of levels for a particular facet in your code. Instead, you should parse the given facets recursively by looking for the `children` property in each one.
