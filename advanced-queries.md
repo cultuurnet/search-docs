@@ -41,11 +41,14 @@ To search for this label in an advanced query, it should be escaped and encapsul
 GET https://search.uitdatabank.be/offers/?q=labels:"\"dag van de fiets\""
 ```
 
-## Supported fields advanced query
+## Supported fields
 
 | Field | Type | Comments |
 | :--- | :--- | :--- |
 | id | String | Complete matches only by default\* |
+| calendarType | String | Complete matches only by default\* |
+| dateRange | Date range | See [Date & time](/date.md) |
+| availableRange | Date range | See [Availability](/availability.md) |
 | workflowStatus | Enum \(String\) | See [Workflow status](/workflow-status.md) |
 | name.nl | String |  |
 | name.fr | String |  |
@@ -62,6 +65,7 @@ GET https://search.uitdatabank.be/offers/?q=labels:"\"dag van de fiets\""
 | price | Integer | See [Price](/price.md) |
 | typicalAgeRange | Integer range | See [Age](/age.md) |
 | audienceType | String | See [Audience type](/audience-type.md) |
+| mediaObjectsCount | Integer | See [Media objects](/media-objects.md) |
 | labels | String | Complete matches only by default\* |
 | typicalAgeRange | Integer range |  |
 | addressCountry | Enum | See [Address](/address.md) |
@@ -83,8 +87,13 @@ GET https://search.uitdatabank.be/offers/?q=labels:"\"dag van de fiets\""
 | organizer.name.de | String |  |
 | organizer.name.fr | String |  |
 | organizer.labels | String | Complete matches only by default\* |
+| creator | String | See [Creator](/creator.md) |
+| createdRange | DateRange | See [Created and Modified](/created-and-modified.md) |
+| modifiedRange | DateRange | See [Created and Modified](/created-and-modified.md) |
 
 \* Wildcards allowed to search for partial matches
+
+
 
 ## URL parameters
 

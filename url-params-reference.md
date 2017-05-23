@@ -28,7 +28,7 @@
 | postalCode | filter by address-related fields (integer or string) | postalCode=3000 |  
 | price | filter on an exact price | price=9.99 |  
 | q | search for text across multiple pre-defined fields | q=(wandeling OR wandelen) AND femma |  
-| regionId | filter all documents by a (single) specific region | regionId=gem-leuven |  
+| regions | filter all documents by a (single) specific region | regions=gem-leuven |  
 | termIds | filter by one or more term ids or term labels (http://taxonomy.uitdatabank.be/api/domain/eventtype/classification) | termIds[]=0.55.0.0.0 |  
 | termLabels | filter by one or more term ids or term labels (http://taxonomy.uitdatabank.be/api/domain/eventtype/classification) | termLabels[]=Theatervoorstelling |  
 | text | search for text across multiple pre-defined fields | text=(wandeling OR wandelen) AND femma |  

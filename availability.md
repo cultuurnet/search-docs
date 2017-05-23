@@ -13,7 +13,7 @@ The API provides two parameters which are **both set to the current date and tim
 * `availableFrom` \(ISO-8601 datetime, eg. "2017-04-11T12:08:01+01:00"\)
 * `availableTo` \(ISO-8601 datetime, eg. "2017-04-11T12:08:01+01:00"\)
 
-**Note that the "+" sign should be encoded for URLs \(as %2B\)! **Otherwise it will be interpreted as whitespace and the given date time will be considered invalid.
+**Note that the "+" sign should be encoded for URLs \(as %2B\)!** Otherwise it will be interpreted as whitespace and the given date time will be considered invalid.
 
 ## Retrieving all events and places regardless of availability
 
