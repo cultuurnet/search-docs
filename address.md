@@ -5,6 +5,8 @@ You can filter by address-related fields using two methods:
 * URL parameter
 * Advanced queries
 
+By default, the search API will only return results that are in Belgium. You can reset this default as described in [Default filters](/default-filters.md).
+
 ## URL parameter
 
 Currently, the only URL parameters for address fields are `postalCode` and `addressCountry`.
@@ -30,7 +32,7 @@ Using advanced queries, you can not only filter by `postalCode` or `addressCount
 For example:
 
 ```
-GET https://search.uitdatabank.be/offers/?q=addressCountry:BE AND postalCode:3000 AND addressLocality:Leuven AND streetAddress:Bondgenotenlaan*
+GET https://search.uitdatabank.be/offers/?addressCountry=*&q=addressCountry:BE AND postalCode:3000 AND addressLocality:Leuven AND streetAddress:Bondgenotenlaan*
 ```
 
 All address fields allow wildcards and/or complete matches \(using quotes\) like regular string fields, but only when using advanced queries.

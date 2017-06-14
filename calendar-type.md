@@ -17,6 +17,14 @@ Using the `calendarType` URL parameter, you can limit the results you get back t
 GET https://search.uitdatabank.be/offers/?calendarType=single
 ```
 
+Additionally, you can limit the results to documents that have either one of multiple `calendarType` values:
+
+```
+GET https://search.uitdatabank.be/offers/?calendarType=single,multiple
+```
+
+Delimiting the `calendarType` parameter using a comma works as if using an `OR` operator.
+
 ## Advanced queries
 
 Using [advanced queries](/advanced-queries.md), you can make more complex combinations than using the calendarType URL parameter.
@@ -32,6 +40,7 @@ GET https://search.uitdatabank.be/offers/?q=!(calendarType:permanent)
 ```
 
 For more info, see [advanced queries](/advanced-queries.md).
+
 
 ## Examples
 

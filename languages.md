@@ -49,7 +49,7 @@ To fix this, you should use the `textLanguage` parameter as described in the [fr
 
 Using either the URL parameter or advanced queries to filter by language\(s\), you might still get results that only have partial translations. This is because as soon as a single field is translated to a specific language, the whole document is considered to have a translation \(albeit an incomplete one\).
 
-If you require specific fields to be translated, you can filter out documents that don't have translations for those fields by using [advanced queries](/advanced-queries.md) to check for the existence of a field translation:
+If you require specific fields to be translated, you can search for those documents by using [advanced queries](/advanced-queries.md) to check for the existence of a field translation:
 
 ```
 GET https://search.uitdatabank.be/offers/?q=_exists_:name.fr AND _exists_:description.fr
@@ -64,6 +64,34 @@ GET https://search.uitdatabank.be/offers/?q=!(_exists_:name.fr) OR !(_exists_:de
 ```
 
 This will return all documents that are missing French translations for either `name` and/or `description`.
+
+Alternatively, you use the `completedLanguages` URL parameter \(and field in [advanced queries](/advanced-queries.md)\) to only look for documents that are fully translated to a specific language.
+
+```
+GET https://search.uitdatabank.be/offers/?completedLanguages[]=fr
+```
+
+```
+GET https://search.uitdatabank.be/offers/?q=completedLanguages:fr OR completedLanguages:de
+```
+
+Note that if an optional field is left empty in all languages, a translation can still be considered to be complete if all other fields that have a value are translated.
+
+## Main Language
+
+Traditionally, each document starts as Dutch and can then be translated to other languages. However, in the future the main language of a document might become configurable. To accommodate this, each document already has a `mainLanguage` property on which you can also search in the Search API.
+
+For example:
+
+```
+GET https://search.uitdatabank.be/offers/?mainLanguage=nl
+```
+
+Or using [advanced queries](/advanced-queries.md):
+
+```
+GET https://search.uitdatabank.be/offers/?q=mainLanguage:nl
+```
 
 ## Examples
 

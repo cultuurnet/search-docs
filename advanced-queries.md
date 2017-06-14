@@ -94,7 +94,6 @@ GET https://search.uitdatabank.be/offers/?q=labels:"\"dag van de fiets\""
 \* Wildcards allowed to search for partial matches
 
 
-
 ## URL parameters
 
 | URL param | Description | Example |

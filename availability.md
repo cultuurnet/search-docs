@@ -6,7 +6,7 @@ Places are considered to be permanently available, starting when they are publis
 
 Note however, that an event's availability is not the same as the date and time that the event actually takes place. Instead, it is an indication of when the event can be shown on public output channels. **Generally, you will only want to search through events and places that are available right now**, unless you are building a backend in which users can create and edit their events and places, in which case they need to be able to view their events that are no longer available or will become available in the future.
 
-Because of this, **Search API v3 has default filters that hide any events or places that are considered to be either no longer available, or not available yet.** However, you can disable these default filters, and even override them.
+Because of this, Search API v3 has default filters that hide any events or places that are considered to be either no longer available, or not available yet. However, you can disable these default filters, and even override them.
 
 The API provides two parameters which are **both set to the current date and time by default**:
 
@@ -24,6 +24,12 @@ GET https://search.uitdatabank.be/offers/?availableFrom=*&availableTo=*
 ```
 
 By disabling these filters, you will get all events and places that are currently available, as well as events and places that were available in the past or will be available in the future.
+
+Alternatively you can disable all default filters at once, as described in [Default filters](/default-filters.md):
+
+```
+GET https://search.uitdatabank.be/offers/?disableDefaultFilters=true
+```
 
 ## Retrieving all currently available events and places, and those that were available in the past
 
@@ -57,7 +63,7 @@ GET https://search.uitdatabank.be/offers/?availableFrom=2017-04-01T00:00:00%2B01
 
 This will return all events and places that were, at some point, available in April 2017. \(Even if they were only available for a portion of April 2017, they will still get returned.\)
 
-You can also disable one of the two, and still pass a custom date and time to the other.
+You can also disable on of the two, and still pass a custom date and time to the other.
 
 For example:
 
@@ -69,7 +75,7 @@ This will return all events and places that were, at some point, available befor
 
 ## Advanced queries
 
-You can also search by availability using [advanced queries](/advanced-queries.md). **However! You should always reset the default `availableFrom` and `availableTo` if you want to search by availability in your advanced queries.**
+You can also search by availability using [advanced queries](/advanced-queries.md). **However! You should always reset the default **`availableFrom`** and **`availableTo`** if you want to search by availability in your advanced queries.**
 
 To search by availability in advanced queries, you can use the `availableRange` field and either look for a specific date, or a range.
 
@@ -86,19 +92,3 @@ GET https://search.uitdatabank.be/offers/?q=availableRange:[2017-01-01T00:00:00%
 ```
 
 For more info, see the documentation for [advanced queries](/advanced-queries.md).
-
-## Examples
-
-### "Open Monumentendag"
-> All activities for the yearly event "Open Monumentendag" are saved in UiTdatabank between april and june. 
-> These events all have a scheduled publication date on the first of august (= press release), so they should not appear on publication channels before this date.
-> To build the website for "Open Monumentendag", developers should be able to show these hidden events (override default filters)
-
-**params**
-* Advanced query: `q=labels:"Open Monumentendag 2017" AND availableRange:[2017-08-01T00:00:00%2B01:00 TO 2017-09-12T23:59:59%2B01:00]&availableFrom=*&availableTo=*`
-* URL param: `availableFrom=*&availableTo=*`
-
-```
-GET https://search.uitdatabank.be/offers/?q=labels:"Open Monumentendag 2017" AND availableRange:[2017-08-01T00:00:00%2B01:00 TO 2017-09-12T23:59:59%2B01:00]&availableFrom=*&availableTo=*
-```
-
