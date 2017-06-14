@@ -2,7 +2,7 @@
 
 ## Getting started
 
-* [Introduction](README.md)
+* [Introduction](/getting_started/README.md)
 * [Pagination](pagination.md)
 * [Embedding result bodies](embedding-full-result-bodies.md)
 * [Case sensitivity](case-sensitivity.md)
