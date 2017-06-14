@@ -93,19 +93,3 @@ GET https://search.uitdatabank.be/offers/?text="the editors"&textLanguages[]=nl&
 Note that the `textLanguages` parameter does not filter documents by their available languages. For example, when searching in both `nl` and `fr`, you can get results that only have either one language but still have a matching term in that specific language.
 
 To actually filter documents by their available languages, see [Languages](/languages.md).
-
-
-## Examples
-
-### Search for "DJ Shadow"
-> All offers that contain the string "DJ Shadow" in one of the following fields: title, description, labels, organizer
-
-
-**params**
-* Advanced query: `q="DJ Shadow"`
-* URL param: `text="DJ Shadow"`
-
-```
-GET https://search.uitdatabank.be/offers/?q="DJ Shadow"&embed=true
-```
-

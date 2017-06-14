@@ -36,37 +36,3 @@ GET https://search.uitdatabank.be/offers/?q=labels:"uitpas leuven" OR labels:pas
 ```
 
 For more info, see the [advanced queries documentation](/advanced-queries.md).
-
-## Examples
-
-### UiTPAS Oostende
-> show all events that take place in Oostende and have an UiTPAS organiser
-
-**params**
-* URL param: `labels[]="UiTPAS Oostende"&regionId=gem-oostende`
-* Advanced query: `q=labels:"UiTPAS Oostende" AND regions:gem-Oostende`
-
-```
-GET https://search.uitdatabank.be/offers/?q=labels:"UiTPAS Oostende" AND regions:gem-Oostende
-```
-
-### Jazzmozaiek
-> show all events that are labeled with "jazzmozaiek"
-
-**params**
-* URL param: `labels[]=jazzmozaiek`
-
-```
-GET https://search.uitdatabank.be/offers/?labels[]=jazzmozaiek
-```
-
-### Open Monumentendag
-> show all events that were organized for the Open Monumentendag event
-
-**params**
-
-* Advanced query: `q=labels:"Open Monumentendag*"` 
-
-```
-GET https://search.uitdatabank.be/offers/?q=labels:"Open Monumentendag*"
-```

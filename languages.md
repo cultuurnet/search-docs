@@ -92,37 +92,3 @@ Or using [advanced queries](/advanced-queries.md):
 ```
 GET https://search.uitdatabank.be/offers/?q=mainLanguage:nl
 ```
-
-## Examples
-
-### French events
-> Search for events that have translated fields (titel and description) in French
-
-**params**
-* URL param: `languages[]=fr`
-* Advanced query: `q=_exists_:name.fr AND _exists_:description.fr&languages[]=fr`
-
-```
-GET https://search.uitdatabank.be/events/?embed=true&q=_exists_:name.fr AND _exists_:description.fr&languages[]=fr
-```
-
-### Fully translated events
-> Search for events that are fully translated in 3 languages: FR, DE, EN
-
-**params**
-* URL param: `languages[]=fr&languages[]=de&languages[]=en`
-* Advanced query: `q=((_exists_:name.fr AND _exists_:description.fr) OR (_exists_:name.en AND _exists_:description.en) OR (_exists_:name.de AND _exists_:description.de))`
-
-```
-GET https://search.uitdatabank.be/events/?embed=true&q=((_exists_:name.fr AND _exists_:description.fr) OR (_exists_:name.en AND _exists_:description.en) OR (_exists_:name.de AND _exists_:description.de))&languages[]=fr&languages[]=de&languages[]=en
-```
-
-### Translated events
-> Search for events that have at least one translation in EN, FR or DE
-
-**params**
-* Advanced query: `q=languages:("fr" OR "de" OR "en")`
-
-```
-GET https://search.uitdatabank.be/events/?embed=true&q=languages:("fr" OR "de" OR "en")
-```

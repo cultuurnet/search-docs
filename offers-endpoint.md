@@ -44,37 +44,3 @@ GET https://search.uitdatabank.be/places/
 ```
 
 All parameters applicable to the `/offers/` endpoint are also applicable on `/events/` and `/places/`. Because of this, the documentation will generally use the `/offers/` endpoint in examples.
-
-## Examples
-
-### All pubs in Leuven
-> A list of places with type 'Horeca' combined with free-text-search for 'pubs'
-
-**params**
-* URL param: `regionIds=gem-Leuven&termLabels[]=Horeca`
-* Free text search: `q=bar OR café OR staminee`
-
-```
-GET https://search.uitdatabank.be/places/?q=(bar OR café OR staminee)&regionIds=gem-Leuven&termIds[]=Horeca
-```
-
-### All monuments in Flanders
-> a list of all places with type 'Monument'
-
-**params**
-* URL param: `termIds[]=0.14.0.0.0`
-
-```
-GET https://search.uitdatabank.be/places/?termIds[]=0.14.0.0.0
-```
-
-### All events  that take place in monuments in Flanders
-> a list of all events that occur in a place with  type 'Monument'
-
-**params**
-
-* URL param: `locationTermIds[]0.14.0.0.0`
-
-```
-GET https://search.uitdatabank.be/events/?locationTermIds[]0.14.0.0.0
-```

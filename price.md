@@ -60,28 +60,3 @@ GET https://search.uitdatabank.be/offers/?q=price:[9.99 TO 20] OR price:29.99
 ```
 
 For more info, see the [advanced queries documentation](/advanced-queries.md).
-
-## Examples
-
-### Free PASPARTOE events in Brussels
-> Show only free events that take place in Brussels and have the PASPARTOE label
-
-**params**
-* URL param: `price=0&labels[]=paspartoe&regionIds=gem-brussel`
-* Advanced query: `q=price:0 AND labels:paspartoe AND regions=gem-brussel`
-
-```
-GET https://search.uitdatabank.be/events/?price=0&labels[]=paspartoe&regionIds=gem-brussel
-```
-
-### Less than 5 EUR
-> Show events  that cost 5 EUR or less
-
-**params**
-* URL param: `maxPrice=5`
-* Advanced query: `q=price:[* TO 5]`
-
-
-```
-GET https://search.uitdatabank.be/events/?maxPrice=5
-```

@@ -40,26 +40,3 @@ GET https://search.uitdatabank.be/offers/?q=!(calendarType:permanent)
 ```
 
 For more info, see [advanced queries](/advanced-queries.md).
-
-
-## Examples
-
-### All non-recurring events in Ghent
-> return events with calendarType 'single' or calendarType 'multiple' in Ghent to get a list of events that only have one or a few occurences
-
-
-**params**
-- Advanced query: `q=((calendarType:single OR calendarType:multiple) AND regions:gem-gent)`
-
-```
-GET https://search.uitdatabank.be/events/?q=((calendarType:single OR calendarType:multiple) AND regions:gem-gent)&embed=true
-```
-
-### Exclude permanent events
-> exclude events with a specific calendartype
-
-- Advanced query: `q=!(calendarType:permanent)`
-
-```
-GET https://search.uitdatabank.be/events/?q=!(calendarType:permanent)
-```

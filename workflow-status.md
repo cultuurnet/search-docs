@@ -61,17 +61,3 @@ GET https://search.uitdatabank.be/offers/?...&q=workflowStatus:DRAFT or workflow
 **Note that you still have to reset the default `workflowStatus` filter first.** Alternatively you can use the `disableDefaultFilters` parameter, as described in [Default filters](/default-filters.md).
 
 For more info, see the [advanced queries documentation](/advanced-queries.md).
-
-
-## Examples
-
-### Approved events in Mechelen
-> Show only approved events that take place in city Mechelen
-
-**params**
-* URL param: `workflowStatus=APPROVED&regionId=gem-mechelen`
-
-```
-GET https://search.uitdatabank.be/offers/?workflowStatus=APPROVED&regionId=gem-mechelen
-```
-
