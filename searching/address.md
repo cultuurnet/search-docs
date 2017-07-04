@@ -25,18 +25,37 @@ GET https://search.uitdatabank.be/offers/?addressCountry=BE
 
 These URL parameters look for complete matches, but are case insensitive.
 
+Note that a document can have multiple addresses, one for each language. The `postalCode` and `addressCountry` URL parameters look for a match in any of these addresses.
+
 ## Advanced queries
 
 Using advanced queries, you can not only filter by `postalCode` or `addressCountry`, but also by `addressLocality` and `streetAddress`.
 
+Because a document can have address translations, you can search by a specific language or alternatively use a wildcard instead of specifying a language.
+
 For example:
 
 ```
-GET https://search.uitdatabank.be/offers/?addressCountry=*&q=addressCountry:BE AND postalCode:3000 AND addressLocality:Leuven AND streetAddress:Bondgenotenlaan*
+GET https://search.uitdatabank.be/offers/?addressCountry=*&q=address.nl.addressCountry:BE AND address.nl.postalCode:3000 AND address.nl.addressLocality:Leuven AND address.nl.streetAddress:Bondgenotenlaan*
 ```
 
-All address fields allow wildcards and/or complete matches \(using quotes\) like regular string fields, but only when using advanced queries.
+The query above will look for specific matches in the `nl` address.
 
-Note that `streetAddress` also includes the street number, so make sure to use a wildcard to filter by a street name!
+The following example looks for matches in any language:
+
+```
+GET https://search.uitdatabank.be/offers/?addressCountry=*&q=address.\*.addressCountry:BE AND address.\*.postalCode:3000 AND address.\*.addressLocality:Leuven AND address.\*.streetAddress:Bondgenotenlaan*
+```
+
+Note that wildcards in field names should be escaped using a backslash. \(`\`\)
+
+Note that `streetAddress` also includes the street number, so make sure to add a wildcard to the field value to filter by a street name. Like so:
+
+```
+address.\*.streetAddress:Bondgenotenlaan*
+```
 
 For more information, see [advanced queries](/advanced-queries.md).
+
+
+
