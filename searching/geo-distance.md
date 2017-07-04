@@ -1,6 +1,6 @@
 # Geo distance
 
-Searching by geo distance is based on the geographical coördinates of events and places. The difference with [searching by region](/region.md) is that a geo distance query starts from a single pair of coördinates, and looks for events and places in a specific range from the given location.
+Searching by geo distance is based on the geographical coördinates of events and places. The difference with [searching by region](/searching/region.md) is that a geo distance query starts from a single pair of coördinates, and looks for events and places in a specific range from the given location.
 
 Currently the only way to search by geo distance is using the `coordinates` and `distance` URL parameters.
 

@@ -48,7 +48,7 @@ GET https://search.uitdatabank.be/offers/?dateTo=2017-01-01T12:00:00%2B01:00
 
 ## Advanced queries
 
-You can also search by date using [advanced queries](/advanced-queries.md), which allows you to create more complex queries than by using the URL parameters, but with the downside that opening hours will not be taken into account. So you will only get events and places that have no opening hours.
+You can also search by date using [advanced queries](/reference/advanced-queries.md), which allows you to create more complex queries than by using the URL parameters, but with the downside that opening hours will not be taken into account. So you will only get events and places that have no opening hours.
 
 To search by date using advanced queries, you can use the `dateRange` field that is indexed for each date range on an event or place. This field can be queried with either a single value or a range.
 

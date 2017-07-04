@@ -5,7 +5,7 @@ You can filter by address-related fields using two methods:
 * URL parameter
 * Advanced queries
 
-By default, the search API will only return results that are in Belgium. You can reset this default as described in [Default filters](/default-filters.md).
+By default, the search API will only return results that are in Belgium. You can reset this default as described in [Default filters](/getting_started/default-filters.md).
 
 ## URL parameter
 
@@ -55,7 +55,7 @@ Note that `streetAddress` also includes the street number, so make sure to add a
 address.\*.streetAddress:Bondgenotenlaan*
 ```
 
-For more information, see [advanced queries](/advanced-queries.md).
+For more information, see [advanced queries](/reference/advanced-queries.md).
 
 
 

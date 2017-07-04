@@ -13,7 +13,7 @@ There are 3 possible values for audience type on a place or event:
 
 By default, the search API will only return results that have `audienceType` set as `everyone`. \(Places and events without an `audienceType` are always considered to be for `everyone`\)
 
-You can reset this default as described in [Default filters](/default-filters.md).
+You can reset this default as described in [Default filters](/getting_started/default-filters.md).
 
 ## Url parameter
 
@@ -25,7 +25,7 @@ GET https://search.uitdatabank.be/offers/?audienceType=members
 
 ## Advanced queries
 
-Using the `q` parameter, you can execute more [advanced queries](/advanced-queries.md) than by using the `audienceType` URL parameter.
+Using the `q` parameter, you can execute more [advanced queries](/reference/advanced-queries.md) than by using the `audienceType` URL parameter.
 
 For example:
 
@@ -33,4 +33,4 @@ For example:
 GET https://search.uitdatabank.be/offers/?audienceType=*&q=audienceType:members OR audienceType:education
 ```
 
-For more info, see the [advanced queries documentation](/advanced-queries.md).
+For more info, see the [advanced queries documentation](/reference/advanced-queries.md).

@@ -33,7 +33,7 @@ GET https://search.uitdatabank.be/offers/?locationTermLabels[]=Jeugdhuis of jeug
 
 ## Advanced queries
 
-Using the `q` parameter, you can execute more [advanced queries](/advanced-queries.md) than by using the URL parameters mentioned above.
+Using the `q` parameter, you can execute more [advanced queries](/reference/advanced-queries.md) than by using the URL parameters mentioned above.
 
 For example:
 
@@ -49,7 +49,7 @@ When searching for term ids or term labels with spaces, be sure to encapsulate t
 GET https://search.uitdatabank.be/offers/?q=terms.label:"Begeleide rondleiding" OR location.terms.label:"Jeugdhuis of jeugdcentrum"
 ```
 
-For more info, see the [advanced queries documentation](/advanced-queries.md).
+For more info, see the [advanced queries documentation](/reference/advanced-queries.md).
 
 For a list of available terms, see [UiTdatabank taxonomy](http://taxonomy.uitdatabank.be/api/domain):
 * All available domains: http://taxonomy.uitdatabank.be/api/domain

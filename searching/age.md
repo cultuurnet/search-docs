@@ -27,7 +27,7 @@ GET https://search.uitdatabank.be/offers/?minAge=16
 
 ## Advanced queries
 
-Using the `q` parameter, you can execute more [advanced queries](/advanced-queries.md) than by using the `minAge` and/or `maxAge` URL parameter.
+Using the `q` parameter, you can execute more [advanced queries](/reference/advanced-queries.md) than by using the `minAge` and/or `maxAge` URL parameter.
 
 For example:
 
@@ -35,4 +35,4 @@ For example:
 GET https://search.uitdatabank.be/offers/?q=typicalAgeRange:[12 TO 14] OR typicalAgeRange:[* TO 8]
 ```
 
-For more info, see the [advanced queries documentation](/advanced-queries.md).
+For more info, see the [advanced queries documentation](/reference/advanced-queries.md).

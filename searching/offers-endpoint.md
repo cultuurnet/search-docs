@@ -30,8 +30,8 @@ A typical response from this endpoint looks like this:
 
 This endpoint supports the following global features:
 
-* [Pagination](/pagination.md)
-* [Embedding result bodies](/embedding-full-result-bodies.md)
+* [Pagination](/getting_started/pagination.md)
+* [Embedding result bodies](/getting_started/embedding-full-result-bodies.md)
 
 If you want to limit your search to specifically events or places, you can use the `/events/` and `/places/` endpoints instead:
 

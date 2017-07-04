@@ -2,34 +2,34 @@
 
 The search API applies a couple of filters by default to provide you with the most relevant results for most use cases:
 
-* [**workflowStatus**](/workflow-status.md): Only results with the status `APPROVED` or `READY_FOR_VALIDATION` will be returned by default.
-* [**availability**](/availability.md): Only results that are currently available will be returned by default.
-* [**addressCountry**](/address.md): Only results that are in Belgium are returned by default.
-* [**audienceType**](/audience-type.md): Only results that have an `audienceType` set to `everyone` are returned by default.
+* [**workflowStatus**](/searching/workflow-status.md): Only results with the status `APPROVED` or `READY_FOR_VALIDATION` will be returned by default.
+* [**availability**](/searching/availability.md): Only results that are currently available will be returned by default.
+* [**addressCountry**](/searching/address.md): Only results that are in Belgium are returned by default.
+* [**audienceType**](/searching/audience-type.md): Only results that have an `audienceType` set to `everyone` are returned by default.
 
 You can either reset these filters individually, or disable them all at once.
 
 ## Individually reset
 
-[**Workflow status**](/workflow-status.md)**:**
+[**Workflow status**](/searching/workflow-status.md)**:**
 
 ```
 GET https://search.uitdatabank.be/offers/?workflowStatus=*
 ```
 
-[**Availability**](/availability.md):
+[**Availability**](/searching/availability.md):
 
 ```
 GET https://search.uitdatabank.be/offers/?availableFrom=*&availableTo=*
 ```
 
-[**Country**](/address.md):
+[**Country**](/searching/address.md):
 
 ```
 GET https://search.uitdatabank.be/offers/?addressCountry=*
 ```
 
-[**Audience type**](/audience-type.md):
+[**Audience type**](/searching/audience-type.md):
 
 ```
 GET https://search.uitdatabank.be/offers/?audienceType=*

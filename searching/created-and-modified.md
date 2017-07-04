@@ -1,4 +1,4 @@
-# Metadata
+# Created and modified - metadata
 
 UiTdatabank v3 keeps track of offer creation en modification dates. This metdata can be queried with the following parameters:
 
@@ -31,7 +31,7 @@ GET https://search.uitdatabank.be/offers/?modifiedTo=2017-04-11T12:08:01%2B01:00
 
 ## Advanced queries
 
-You can also search on `created` or `modified` using [advanced queries](/advanced-queries.md).
+You can also search on `created` or `modified` using [advanced queries](/reference/advanced-queries.md).
 
 For example to search for all offers created on or after a specific date use the following query:
 

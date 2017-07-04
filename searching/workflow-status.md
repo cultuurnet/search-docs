@@ -22,7 +22,7 @@ Or when using advanced queries:
 GET https://search.uitdatabank.be/offers/?availableFrom=*&availableTo=*&q=workflowStatus:DRAFT
 ```
 
-See [Availability](/availability.md) for more info.
+See [Availability](/searching/availability.md) for more info.
 
 ## URL parameter
 
@@ -50,7 +50,7 @@ GET https://search.uitdatabank.be/offers/?workflowStatus=*
 
 ## Advanced queries
 
-Using the `q` parameter, you can execute more [advanced queries](/advanced-queries.md) than by using the `workflowStatus` URL parameter.
+Using the `q` parameter, you can execute more [advanced queries](/reference/advanced-queries.md) than by using the `workflowStatus` URL parameter.
 
 For example:
 
@@ -58,6 +58,6 @@ For example:
 GET https://search.uitdatabank.be/offers/?...&q=workflowStatus:DRAFT or workflowStatus:READY_FOR_VALIDATION
 ```
 
-**Note that you still have to reset the default `workflowStatus` filter first.** Alternatively you can use the `disableDefaultFilters` parameter, as described in [Default filters](/default-filters.md).
+**Note that you still have to reset the default `workflowStatus` filter first.** Alternatively you can use the `disableDefaultFilters` parameter, as described in [Default filters](/getting_started/default-filters.md).
 
-For more info, see the [advanced queries documentation](/advanced-queries.md).
+For more info, see the [advanced queries documentation](/reference/advanced-queries.md).
