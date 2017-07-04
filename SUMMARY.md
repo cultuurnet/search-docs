@@ -3,6 +3,7 @@
 ## Getting started
 
 * [Introduction](README.md)
+* [Authentication](getting_started/authentication.md)
 * [Pagination](getting_started/pagination.md)
 * [Embedding result bodies](getting_started/embedding-full-result-bodies.md)
 * [Case sensitivity](getting_started/case-sensitivity.md)
