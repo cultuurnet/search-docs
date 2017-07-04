@@ -7,7 +7,7 @@ You can add your API key to a request in two ways:
 * As a query parameter
 * In a custom `X-Api-Key` header
 
-\[@stan Info over projectaanvraag etc toevoegen.\]
+You can apply for a personal API key [here](https://projectaanvraag.uitdatabank.be).
 
 ## Query parameter
 
