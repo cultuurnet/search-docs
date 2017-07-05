@@ -23,7 +23,7 @@ GET https://search.uitdatabank.be/events/?q=terms.label:%22Kamp%20of%20vakantie%
 
 
 ## In the mood for "arts & culture"
-> show all temporary events that have an "arts & culture" setting
+> show all temporary events that focus on "arts & culture" (a selection based on specific eventtypes and themes)
 
 **Include**
 - eventtype: tentoonstelling
