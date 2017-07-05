@@ -3,17 +3,17 @@
 ## Tipswidget "Mijn Kind op Kamp"
 > show a selection of the first 5 occuring events for children with eventtype "kamp of vakantie" that take place during the summer of 2017
 
-- periode: zomervakantie 2017 
+- [periode](/searching/date.md): zomervakantie 2017 
 `q=dateRange:[2017-07-01T00:00:00+01:00 TO 2017-08-31T23:59:59+01:00]`
-- type:"Kamp of vakantie" 
+- [type](/searching/terms.md):"Kamp of vakantie" 
 `q=terms.label:"Kamp of vakantie"`
-- leeftijd: jonger dan 14 jaar 
+- [leeftijd](/searching/age.md): jonger dan 14 jaar 
 `q=typicalAgeRange:[* TO 14]`
-- met afbeelding 
+- met [afbeelding](/searching/media-objects.md) 
 `q=mediaObjectsCount:>=1`
-- gesorteerd op startdatum
+- [gesorteerd](/searching/sorting.md) op startdatum
 `sort[availableTo]=asc`
-- toon enkel 5 results
+- toon enkel [5 results](/getting_started/pagination.md)
 `limit=5`
 
 
@@ -26,24 +26,24 @@ GET https://search.uitdatabank.be/events/?q=terms.label:%22Kamp%20of%20vakantie%
 > show all temporary events that focus on "arts & culture" (a selection based on specific eventtypes and themes)
 
 **Include**
-- eventtype: tentoonstelling
+- [eventtype](/searching/terms.md): tentoonstelling
 `q=terms.id:0.0.0.0.0`
-- eventtype: theatervoorstelling
+- [eventtype](/searching/terms.md): theatervoorstelling
 `q=terms.id:0.55.0.0.0`
-- eventtype: dansvoorstelling
+- [eventtype](/searching/terms.md): dansvoorstelling
 `q=terms.id:0.54.0.0.0`
-- theme: jazz & blues
+- [theme](/searching/terms.md): jazz & blues
 `q=terms.id:1.8.2.0.0`
-- theme: klassiek
+- [theme](/searching/terms.md): klassiek
 `q=terms.id:1.8.1.0.0`
-- temporary events
+- [temporary](/searching/calendar-type.md) events
 `q=calendarType:single OR calendarType:multiple`
 
 
 **Exclude**
-- eventtype: cursus en workshop
+- [eventtype](/searching/terms.md): cursus en workshop
 `q=terms.id:0.3.1.0.0`
-- eventtype: lezing en congres
+- [eventtype](/searching/terms.md): lezing en congres
 `q=terms.id:0.3.2.0.0
 
 
@@ -54,9 +54,9 @@ GET https://search.uitdatabank.be/events/?q=(((terms.label:Tentoonstelling%20OR%
 
 ## Free events in Ghent
 
-- free
+- [free](/searching/price.md) events
 `q=price:0`
-- Ghent
+- [Ghent](/searching/region.md)
 `q=regions:gem-gent`
 
 ```
@@ -67,7 +67,7 @@ GET https://search.uitdatabank.be/events/?q=price:0%20AND%20regions:gem-gent
 ## UiTPAS Oostende events
 > show all events that take place in Oostende and have an UiTPAS organizer
 
-- UiTPAS Oostende
+- [UiTPAS](/searching/uitpas.md) Oostende
 `q=regions:gem-oostende AND organizer.labels:"UiTPAS Oostende"`
 OR
 `uitpas=true&q=regions:gem-oostende`
